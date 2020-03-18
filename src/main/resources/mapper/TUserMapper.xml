@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tealala.security.springmvc.mapper.TUserMapper">
+    <resultMap id="BaseResultMap" type="com.tealala.security.springmvc.domain.TUser">
+        <!--@mbg.generated generated on Wed Mar 18 16:11:51 CST 2020.-->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="email" jdbcType="VARCHAR" property="email"/>
+        <result column="created_time" jdbcType="TIMESTAMP" property="createdTime"/>
+        <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated generated on Wed Mar 18 16:11:51 CST 2020.-->
+        id, username, `password`, phone, email, created_time, updated_time
+    </sql>
+    <select id="findByUserName" resultMap="BaseResultMap">
+        select * from t_user where t.username = ${username}
+    </select>
+</mapper>
