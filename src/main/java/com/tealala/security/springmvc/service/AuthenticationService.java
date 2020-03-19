@@ -1,13 +1,13 @@
 package com.tealala.security.springmvc.service;
 
-import com.tealala.security.springmvc.domain.TUser;
 import com.tealala.security.springmvc.dto.AuthenticationRequest;
+import com.tealala.security.springmvc.dto.UserDto;
 
 /**
  * @author zhuxiaoyu@digidite.com
- * @date 2020/3/18
+ * @date 2020/3/19
  */
 public interface AuthenticationService {
 
-    TUser authentication(AuthenticationRequest request) throws Exception;
+    UserDto authentication(AuthenticationRequest request) throws Exception;
 }
